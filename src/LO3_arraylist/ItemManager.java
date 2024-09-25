@@ -33,14 +33,25 @@ public class ItemManager {
             System.out.println("Index out of bounds");
         }
     }
+
     //Finding item in the Arraylist
-    public int finditem(String finditem){
+    public int finditem(String finditem) {
         int index = items.indexOf(finditem);
-        if(index != -1) {
-           System.out.println("Found: " + finditem + " at index" + newitem);
-        }else{  
+        if (index != -1) {
+            System.out.println("Found: " + finditem + " at index" + newitem);
+        } else {
             System.out.println(finditem + "not found");
         }
         return index;
-}
+    }
+
+    //Method to delete one item in the Arraylist
+    public void deleteItem(int index) {
+        if (index >= 0 && index < items.size()) {
+            String removeditem = items.remove(index);
+            System.out.println("You have successfully deleted the item: " + removeditem);
+        } else {
+            System.out.println("Index out of bounds");
+        }
+    }
 }

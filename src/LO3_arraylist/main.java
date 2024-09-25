@@ -42,5 +42,37 @@ public class main {
         list.finditem(finditem);
         list.displayItems();
         System.out.print("-------------------------------------");
+        
+        //Deleting an item from the list
+        System.out.println("Enter an index to delete: ");
+        int newIndex = in.nextInt();
+        list.deleteItem(newIndex);
+        list.displayItems();
+        in.close();
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
