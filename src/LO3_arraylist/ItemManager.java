@@ -38,7 +38,7 @@ public class ItemManager {
     public int finditem(String finditem) {
         int index = items.indexOf(finditem);
         if (index != -1) {
-            System.out.println("Found: " + finditem + " at index" + newitem);
+            System.out.println("Found: " + finditem + " at index" + index);
         } else {
             System.out.println(finditem + "not found");
         }
