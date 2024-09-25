@@ -3,9 +3,9 @@ package LO3_arraylist;
 import java.util.Scanner;
 
 public class main {
-
+    
     public static void main(String[] args) {
-
+        
         Scanner in = new Scanner(System.in);
         ItemManager list = new ItemManager();
 
@@ -35,6 +35,12 @@ public class main {
         list.updateItem(index, newitem);
         list.displayItems();
         System.out.println("------------------------------------");
-
+        
+        //Finding user's input and displaying it
+        System.out.println("Enter an item name that you want to find: ");
+        finditem = in. nextLine();
+        list.finditem(finditem);
+        list.displayItems();
+        System.out.print("-------------------------------------");
     }
 }
