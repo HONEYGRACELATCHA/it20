@@ -15,13 +15,26 @@ public class main {
 
         //Displaying items
         list.displayItems();
-        
+
         //user input
         System.out.println("Enter 3 items to add: ");
         item1 = in.nextLine();
         item2 = in.nextLine();
         item3 = in.nextLine();
 
+        //inputs that will be added to the arraylist
+        list.addItems(item1, item2, item3);
+        System.out.println(" ------------------------------");
+
+        //Updating one value
+        System.out.print("Enter an index number that you want to change: ");
+        index = in.nextInt();
+        in.nextLine();
+        System.out.println("Enter a new item that you want to replace with the other index");
+        newitem = in.nextLine();
+        list.updateItem(index, newitem);
+        list.displayItems();
+        System.out.println("------------------------------------");
 
     }
 }

@@ -17,12 +17,21 @@ public class ItemManager {
     }
 
     //Methods to add user's input
-    public void addItems (String item1, String item2, String item3) {
+    public void addItems(String item1, String item2, String item3) {
         items.add(item1);
         items.add(item2);
         items.add(item3);
         System.out.println("You added: " + items);
-  }
+    }
 
+    //Updating one item in the list
+    public void updateItem(int index, String newitem) {
+        if (index >= 0 && index < items.size()) {
+            String oldItem = items.set(index, newitem);
+            System.out.println("You updated:" + oldItem + " to " + newitem);
+        } else {
+            System.out.println("Index out of bounds");
+        }
+    }
 
 }
