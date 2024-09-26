@@ -45,6 +45,15 @@ public class Main {
         list.printlist();
     }
 
+    public static void delete() {
+        System.out.println("Enter element you want to delete");
+        list.printlist();
+        String element = in.next();
+        list.deleteByValue(element);
+        System.out.println("Element ' " + element + " ' Successfully deleted!");
+        System.out.print("list: ");
+    }
+
     public static void main(String[] args) {
 
         System.out.println("You're here in the Simple LinkedList Program");
@@ -55,7 +64,8 @@ public class Main {
             System.out.println("1. Add Element");
             System.out.println("2. Move or switch Element");
             System.out.println("3. Display");
-            System.out.println("4. Exit");
+            System.out.println("4. Delete");
+            System.out.println("5. Exit");
             System.out.println("--------------------------------");
             System.out.println();
 
@@ -71,6 +81,9 @@ public class Main {
                         break;
                     case 3:
                         display();
+                        break;
+                    case 4:
+                        delete();
                         break;
                     case 5:
                         exit = true;

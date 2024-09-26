@@ -27,8 +27,30 @@ public class LinkedList {
         }
         System.out.println("null");
     }
-    // Method to move a node to a new position /swap nodes
 
+    // Method to delete a node by value
+    public void deleteByValue(String value) {
+        if (head == null) {
+            return;
+        }
+
+        // If the head needs to be removed
+        if (head.data == value) {
+            head = head.next;
+            return;
+        }
+
+        Node current = head;
+        while (current.next != null) {
+            if (current.next.data == value) {
+                current.next = current.next.next;
+                return;
+            }
+            current = current.next;
+        }
+    }
+
+    // Method to move a node to a new position /swap nodes
     public void moveNodePointer(int currentIndex, int newIndex) {
         if (head == null || currentIndex == newIndex) {
             return;
