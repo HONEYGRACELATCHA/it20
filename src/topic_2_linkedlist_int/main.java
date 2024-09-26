@@ -12,11 +12,11 @@ public class main {
         boolean repeat = true;
           
         while (repeat) {
-            System.out.println("What Integer would you like to add?");
+            System.out.println("What Integer do you like to add?");
             System.out.print("Integer: ");
-            int elemt = sc.nextInt();
-            list.add(elemt);
-            System.out.println("Integer ' " + elemt + " ' added successfully");
+            int element = sc.nextInt();
+            list.add(element);
+            System.out.println("Integer ' " + element + " '  successfully added");
             System.out.println("Would you like to add more?" + "\nPress 1 for YES \nPress 2 for NO");
             int resp = sc.nextInt();
 
