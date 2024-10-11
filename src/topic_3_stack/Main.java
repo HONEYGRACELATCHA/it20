@@ -18,7 +18,18 @@ public class Main {
                     + "\n4. Pop top Element"
                     + "\n5. Exit");
             System.out.println("================");
+            try {
 
+                System.out.print("Response: ");
+
+                int choice = in.nextInt();
+                System.out.println();
+
+            } catch (Exception e) {
+                System.out.println("Input is not a valid. Please try again!");
+                in.next();
+            }
         }
     }
+
 }
