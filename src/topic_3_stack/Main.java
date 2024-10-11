@@ -35,6 +35,9 @@ public class Main {
                         st.push(num);
                         System.out.println("---------------------");
                         break;
+                    case 3:
+                        System.out.println("The top Element is: " + st.peek());
+                        break;
                     default:
                         System.out.println("Invalid input.");
                 }
