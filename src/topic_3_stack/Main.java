@@ -29,6 +29,12 @@ public class Main {
                         System.out.println("Stack size is: " + st.size());
                         System.out.println("---------------------");
                         break;
+                    case 2:
+                        System.out.println("Push Element: ");
+                        int num = in.nextInt();
+                        st.push(num);
+                        System.out.println("---------------------");
+                        break;
                     default:
                         System.out.println("Invalid input.");
                 }
