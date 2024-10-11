@@ -38,6 +38,10 @@ public class Main {
                     case 3:
                         System.out.println("The top Element is: " + st.peek());
                         break;
+                    case 4:
+                        System.out.println("Popped element: " + st.pop());
+                        st.size();
+                        break;
                     default:
                         System.out.println("Invalid input.");
                 }
