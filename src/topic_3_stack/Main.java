@@ -24,6 +24,14 @@ public class Main {
 
                 int choice = in.nextInt();
                 System.out.println();
+                switch (choice) {
+                    case 1:
+                        System.out.println("Stack size is: " + st.size());
+                        System.out.println("---------------------");
+                        break;
+                    default:
+                        System.out.println("Invalid input.");
+                }
 
             } catch (Exception e) {
                 System.out.println("Input is not a valid. Please try again!");
