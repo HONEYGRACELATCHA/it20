@@ -40,4 +40,8 @@ public class Stack {
         return stackArray[top];
     }
 
-}
+    public int pop() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty. Cannot pop.");
+            return -1;
+        }
