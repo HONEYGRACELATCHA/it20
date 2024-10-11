@@ -20,4 +20,8 @@ public class Stack {
         return (top == maxSize - 1);
     }
 
+    public int size() {
+        return top + 1;
+    }
+
 }
