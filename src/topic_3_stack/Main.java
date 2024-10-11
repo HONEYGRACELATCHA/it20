@@ -42,6 +42,10 @@ public class Main {
                         System.out.println("Popped element: " + st.pop());
                         st.size();
                         break;
+                    case 5:
+                        System.out.println("Thank you for running the program!");
+                        System.exit(0);
+                        break;
                     default:
                         System.out.println("Invalid input.");
                 }
