@@ -69,5 +69,37 @@ public class StackCalculator extends JFrame implements ActionListener {
         }
         
     }
+     private void performOperation(String command) {
+        if (stack.size() < 2) {
+            display.append("Need at least two numbers to " + command + ".\n");
+            return;
+        }
+        int b = stack.pop();
+        int a = stack.pop();
+        int result;
+
+        switch (command) {
+            case "+":
+                result = a + b;
+                break;
+            case "-":
+                result = a - b;
+                break;
+            case "*":
+                result = a * b;
+                break;
+            case "/":
+                if (b == 0) {
+                    display.append("Cannot divide by zero.\n");
+                    stack.push(a);
+                    stack.push(b);
+                    return;
+                }
+                result = a / b;
+                break;
+            default:
+                return; // Unknown operation
+        }
+     }
 
 }
