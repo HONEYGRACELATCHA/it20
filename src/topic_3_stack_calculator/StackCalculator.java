@@ -58,7 +58,8 @@ public class StackCalculator extends JFrame implements ActionListener {
         button.addActionListener(this);
         panel.add(button);
     }
-     @Override
+
+    @Override
     public void actionPerformed(ActionEvent e) {
         String command = e.getActionCommand();
         if (Character.isDigit(command.charAt(0))) {
@@ -67,9 +68,9 @@ public class StackCalculator extends JFrame implements ActionListener {
         } else {
             performOperation(command);
         }
-        
     }
-     private void performOperation(String command) {
+
+    private void performOperation(String command) {
         if (stack.size() < 2) {
             display.append("Need at least two numbers to " + command + ".\n");
             return;
@@ -100,6 +101,21 @@ public class StackCalculator extends JFrame implements ActionListener {
             default:
                 return; // Unknown operation
         }
-     }
 
+        stack.push(result);
+        display.append(String.format("Performed %s: %d %s %d = %d\n", command, a, command, b, result));
+        displayStack();
+    }
+
+    private void displayStack() {
+        display.setText("Current Stack: " + stack + "\n");
+    }
+
+    public static void main(String[] args) {
+
+        SwingUtilities.invokeLater(() -> {
+            StackCalculator calculator = new StackCalculator();
+            calculator.setVisible(true);
+        });
+    }
 }
