@@ -1,14 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package topic_4_queue;
 
-/**
- *
- * @author HOME
- */
+import java.util.Scanner;
+
 public class Main {
-    
+
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+        Queue q = new Queue();
+
+        System.out.println("Welcome to Simple Queue Program!");
+        System.out.println();
+    }
 }
