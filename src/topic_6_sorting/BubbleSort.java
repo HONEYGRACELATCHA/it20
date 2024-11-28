@@ -1,4 +1,5 @@
 package topic_6_sorting;
+
 import java.util.Scanner;
 
 public class BubbleSort {
@@ -28,26 +29,26 @@ public class BubbleSort {
         Scanner in = new Scanner(System.in);
         System.out.print("Enter number of elements in the array: ");
         int n = in.nextInt();
-        
+
         int[] arr = new int[n];
         System.out.println("Enter elements of the array: ");
-        for (int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             arr[i] = in.nextInt();
         }
-             System.out.println("Original array:");
+        System.out.println("Original array:");
         printArray(arr);
-        
+
         long startTime = System.nanoTime();
-        bubbleSort (arr);
-        
+        bubbleSort(arr);
+
         long endTime = System.nanoTime();
-        
+
         System.out.println("Sorted array");
         printArray(arr);
-        
-       long duration = endTime - startTime;
-       System.out.println("Sorting took " + duration + " nanoseconds. ");
-      
-       in.close();
+
+        long duration = endTime - startTime;
+        System.out.println("Sorting took " + duration + " nanoseconds. ");
+
+        in.close();
     }
 }
